@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>f4iz.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Memastikan body minimal setinggi layar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('latar.jpg'); /* Ganti dengan nama file gambar latar belakang Anda */
+            background-size: cover; /* Menyesuaikan gambar dengan ukuran layar */
+            background-position: center; /* Memposisikan gambar di tengah layar */
+            background-repeat: no-repeat; /* Mencegah gambar diulang */
+            position: relative;
+            color: white; /* Mengubah warna teks menjadi putih */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay warna gelap dengan transparansi 50% */
+            z-index: 1;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        .links a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white; /* Mengubah warna teks menjadi putih */
+            border-radius: 5px;
+        }
+        .bio, .address, .media {
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .address, .media {
+            display: none;
+        }
+        .media img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .media .photo {
+            margin: 20px 0;
+        }
+        .media .caption {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #ddd; /* Mengubah warna teks caption menjadi abu-abu muda */
+        }
+        .media video {
+            width: 100%;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+    <script>
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <img src="profil.jpg" alt="Foto Profil">
+        <h1>Nasrul Faiz</h1>
+        <p>"Semangat belajar hal yang baru, dan tinggalkan yang lama"</p>
+        <div class="links">
+            <a href="https://instagram.com/f4iz_n_">Instagram</a>
+            <a href="https://linkedin.com/in/nasrul-faiz">LinkedIn</a>
+            <a href="https://youtube.com/Supra_etc">YouTube</a>
+            <a href="https://g.co/kgs/NcQsXQm">Alamat Sekolah</a>
+            <a href="#" onclick="toggleVisibility('address')">Alamat Saya</a>
+            <a href="#" onclick="toggleVisibility('media')">Media</a>
+        </div>
+        <div id="address" class="address">
+            <h2>Alamat Saya</h2>
+            <p>paris panjava.</p>
+        </div>
+        <div id="media" class="media">
+            <h2>Foto dan Video</h2>
+            <div class="photo">
+                <img src="IMGg.jpg" alt="Foto 1">
+                <div class="caption">selesai belajar dasar insfraktuktur jaringan melalui packet tracer</div>
+            </div>
+            <div class="photo">
+                <img src="IMGa.jpg" alt="Foto 2">
+                <div class="caption">Beljar buku perstama CCNA</div>
+            </div>
+            <div class="photo">
+                <img src="4.jpg" alt="Foto 3">
+                <div class="caption">hsri pertama dan pengalaman pertama dalam sekolah untuk melatih skill "PKL"</div>
+            </div>
+            <div class="photo">
+                <img src="3.jpg" alt="Foto 4">
+                <div class="caption">perjalanan yang berarti</div>
+            </div>
+            <div class="photo">
+                <img src="pkl3.jpg" alt="Foto 5">
+                <div class="caption">akhir nya sampai di tempat yang di inginkan dan itu yang terbaik</div>
+            </div>
+            <video controls>
+                <source src="doxpkl1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
